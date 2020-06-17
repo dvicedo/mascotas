@@ -4,6 +4,9 @@ import LoggedInRoute from "../common/components/LoggedInRoute";
 import Info from "../info/Info";
 import NewPet from "../pets/NewPet";
 import Pets from "../pets/Pets";
+import Adopt from "../adopt/Adopt";
+import MyAdopt from "../myadopt/myAdopt";
+import NewAdopt from "../myadopt/NewAdopt";
 import Profile from "../profile/Profile";
 import Login from "../user/Login";
 import Password from "../user/Password";
@@ -39,7 +42,11 @@ export default function App() {
               <LoggedInRoute path="/pets" component={Pets} />
               <LoggedInRoute path="/editPet" component={NewPet} />
               <LoggedInRoute path="/editPet/:id" component={NewPet} />
-            </td>
+	      <LoggedInRoute path="/adopt" component={Adopt} />
+	      <LoggedInRoute path="/myAdopts" component={MyAdopt} />
+	      <LoggedInRoute path="/editMyAdopts" component={NewAdopt} />
+	      <LoggedInRoute path="/editMyAdopts/:id" component={NewAdopt} />
+          </td>
           </tr>
         </tbody>
       </table>
