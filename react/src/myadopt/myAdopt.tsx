@@ -56,7 +56,7 @@ export default function MyAdopts(props: RouteComponentProps) {
 			     <tr key={i}>
 				<td>{adopt.subject}</td>
 				<td>{adopt.description}</td>
-				<td><Card.Img variant="top" src={`data:image/jpeg;base64,${adopt.image}`} /></td>
+				<td><Card.Img variant="top" src={`${adopt.image}`} /></td>
 				<td>{adopt.contact}</td>
 			 	  <td className="text">
 				    <img

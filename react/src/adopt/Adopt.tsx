@@ -47,7 +47,7 @@ export default function Adopts(props: RouteComponentProps) {
                         return (
 				//<tr key={i}>
 				<Card className="text-center" style={{display: 'flex', width: '20rem', margin: '10px'}}>	
-				<Card.Img variant="top" src={`data:image/jpeg;base64,${adopt.image}`} />
+				<Card.Img variant="top" src={`${adopt.image}`} />
 				<Card.Body>
 				 <Card.Title>{adopt.subject}</Card.Title>
 				  <Card.Text> {adopt.description} </Card.Text>
