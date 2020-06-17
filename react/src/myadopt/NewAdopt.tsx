@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useErrorHandler } from "../common/utils/ErrorHandler";
-import { goHome } from "../common/utils/Tools";
 import "../styles.css";
 import { Card } from 'react-bootstrap';
 import { deleteAdopt, loadAdopt, newAdopt, saveAdopt } from "./myAdoptApi";
@@ -117,17 +116,19 @@ export default function NewAdopt(props: RouteComponentProps<{ id: string }>) {
                     value={description}
                     onChange={event => setDescription(event.target.value)}
                     errorHandler={errorHandler} />
-
-	    <Card.Img variant="top" src={`${image}`} />
-		<input type="file" onChange={onChangeFile} />
-
-	    	<FormInput
+	    
+	       	 <FormInput
                     label="Contacto"
                     name="contact"
                     value={contact}
                     onChange={event => setContact(event.target.value)}
                     errorHandler={errorHandler} />
-		
+	   
+	        <label>Imagen</label>
+		<Card.Img variant="top" src={`${image}`} />
+		<p>
+		<input type="file" onChange={onChangeFile} />
+		</p>
                 <DangerLabel message={errorHandler.errorMessage} />
 
                 <FormButtonBar>

@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { OverlayTrigger, Popover, CardGroup, CardDeck, Card, Button } from 'react-bootstrap';
+import { OverlayTrigger, Popover, Card, Button } from 'react-bootstrap';
 import { Adopt, loadAdopts } from "./adoptApi";
 import "../styles.css";
 import { useErrorHandler } from "../common/utils/ErrorHandler";
-import { goHome } from "../common/utils/Tools";
-import FormButtonBar from "../common/components/FormButtonBar";
-import FormButton from "../common/components/FormButton";
 import FormTitle from "../common/components/FormTitle";
 import GlobalContent from "../common/components/GlobalContent";
 import { RouteComponentProps } from "react-router-dom";
